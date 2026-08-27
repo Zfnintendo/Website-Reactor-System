@@ -1,3 +1,125 @@
 body {
-  background: linear-gradient(to bottom, #4facfe, #00f2fe);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0d1b2a;
 }
+
+.Title {
+    color: #e0e1dd;
+
+    font-family: "Huninn", sans-serif;
+    text-align: center;
+
+    border: 2px solid #415a77;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.Title h4 {
+    display: inline-block;
+    text-align: center;
+    animation: TitleSmallText 5s ease-in-out infinite;
+}
+
+@keyframes TitleSmallText {
+    0% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(-5deg);
+    }
+}
+
+.Controls {
+    background: linear-gradient(to bottom right, #415a77, #0d1b2a);
+
+    align-self: stretch;
+
+    border: 1.5ch double #1b263b;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 2ch;
+    padding: 1ch 1ch;
+}
+
+.ReactorPanel {
+    font-family: "Huninn", sans-serif;
+    color: #e0e1dd;
+
+    border: 2px solid #778da9;
+    border-radius: 5px;
+    padding: 1ch 1ch;
+}
+
+.TempControls {
+    font-family: "Huninn", sans-serif;
+    color: #e0e1dd;
+    text-align: center;
+
+    border: 2px solid #778da9;
+    border-radius: 5px;
+    padding: 1ch 1ch;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    width: 30%;
+}
+
+.RodControls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.Rods {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+    text-align: left;
+}
+
+.Rods h4 {
+    margin: 0;
+}
+
+.Slider {
+    display: flex;
+    justify-content: center;
+    padding-right: 20px;
+    margin-right: 25%;
+}
+
+.Slider input {
+    writing-mode: vertical-lr;
+    direction: rtl;
+    height: 90px;
+}
+
+.Coolants {
+    font-family: "Huninn", sans-serif;
+    color: #e0e1dd;
+
+    border: 2px solid #778da9;
+    border-radius: 5px;
+    padding: 1ch 1ch;
+
+    width: 30%;
+
+    display: flex;
+}
+

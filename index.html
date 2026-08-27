@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Reactor System</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="src/mainScript.js" defer></script>
 
@@ -16,19 +19,28 @@
         <h4>A simplified reactor system!</h4>
     </div>
 
+    <br>
+
     <div class="Controls">
 
-        <h2>Temperature: 323K</h2>
+        <div class="ReactorPanel">
+            <h2>Temperature: 323K</h2>
+        </div>
 
         <div class="TempControls">
             <h2>Rods</h2>
 
             <h3>Insertion: 50%</h3>
 
-            <div class="Rods">
-                <h4>Raise Rods</h4>
-                <h4>Lower Rods</h4>  
-                <input type="range" height: 200px; min="0" max="2" value="1">
+            <div class="RodControls">
+                <div class="Rods">
+                    <h4>Raise Rods</h4>
+                    <h4>Lower Rods</h4>  
+                </div>
+
+                <div class="Slider">
+                    <input type="range" min="0" max="2" value="1">
+                </div>
             </div>
 
         </div>
