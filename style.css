@@ -45,8 +45,8 @@ body {
     border: 1.5ch double #1b263b;
     border-radius: 10px;
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 
     gap: 2ch;
     padding: 1ch 1ch;
@@ -59,6 +59,9 @@ body {
     border: 2px solid #778da9;
     border-radius: 5px;
     padding: 1ch 1ch;
+
+    grid-column: 1 / -1;
+    box-shadow: 0 0 2ch #1b263b;
 }
 
 .TempControls {
@@ -75,7 +78,7 @@ body {
     justify-content: space-between;
     flex-direction: column;
 
-    width: 30%;
+    box-shadow: 0 0 2ch #1b263b;
 }
 
 .RodControls {
@@ -107,7 +110,38 @@ body {
 .Slider input {
     writing-mode: vertical-lr;
     direction: rtl;
-    height: 90px;
+
+    height: 120px;
+    width: 20px;
+
+    appearance: none;
+    background: transparent;
+}
+
+.Slider input::-webkit-slider-runnable-track {
+    width: 8px;
+    background: #1b263b;
+    border: 2px solid #778da9;
+    border-radius: 5px;
+}
+
+.Slider input::-webkit-slider-thumb {
+    appearance: none;
+
+    width: 20px;
+    height: 20px;
+
+    background: #e0e1dd;
+    border: 2px solid #778da9;
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+.Slider input::-webkit-slider-thumb:hover {
+    background: #778da9;
+
+    box-shadow: 0 0 2ch #e0e1dd;
 }
 
 .Coolants {
@@ -118,8 +152,144 @@ body {
     border-radius: 5px;
     padding: 1ch 1ch;
 
-    width: 30%;
-
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2ch;
+
+    box-shadow: 0 0 2ch #1b263b;
 }
 
+.Coolant1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Coolant1 button {
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+    border: 4px inset #778da9;
+
+    background: #1b263b;
+
+    box-shadow: 0 0 10px #000;
+
+    animation: CoolantAnim 5s ease-in-out infinite;
+}
+
+.Coolant1 button:hover {
+    border: 4px outset #778da9;
+    box-shadow: 0 0 2ch #e0e1dd;
+}
+
+.Coolant2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Coolant2 button {
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+    border: 4px inset #778da9;
+
+    background: #1b263b;
+
+    box-shadow: 0 0 10px #000;
+
+    animation: CoolantAnim 5s ease-in-out infinite;
+}
+
+.Coolant2 button:hover {
+    border: 4px outset #778da9;
+    box-shadow: 0 0 2ch #e0e1dd;
+}
+
+@keyframes CoolantAnim {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.Feedwater {
+    font-family: "Huninn", sans-serif;
+    color: #e0e1dd;
+
+    border: 2px solid #778da9;
+    border-radius: 5px;
+    padding: 1ch 1ch;
+
+    box-shadow: 0 0 2ch #1b263b;
+}
+
+.Feedwater button {
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+    border: 4px inset #778da9;
+
+    background: #1b263b;
+
+    box-shadow: 0 0 10px #000;
+
+    animation: CoolantAnim 5s ease-in-out infinite;
+}
+
+.Feedwater button:hover {
+    border: 4px outset #778da9;
+    box-shadow: 0 0 2ch #e0e1dd;
+}
+
+.ReliefValves { 
+    font-family: "Huninn", sans-serif;
+    color: #e0e1dd;
+
+    border: 2px solid #778da9;
+    border-radius: 5px;
+    padding: 1ch 1ch;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1ch;
+    padding: 1ch;
+    text-align: center;
+
+    box-shadow: 0 0 2ch #1b263b;
+}
+
+.ReliefValves h2 {
+    grid-column: 1 / -1;
+}
+
+.ReliefValves button { 
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+    border: 4px inset #778da9;
+
+    background: #1b263b;
+
+    box-shadow: 0 0 10px #000;
+
+    animation: CoolantAnim 5s ease-in-out infinite;
+}
+
+.ReliefValves button:hover {
+    border: 4px outset #778da9;
+    box-shadow: 0 0 2ch #e0e1dd;
+}
