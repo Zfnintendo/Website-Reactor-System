@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <script src="src/mainScript.js" defer></script>
+    <script src="src/main.js" defer></script>
 
 </head>
 <body>
@@ -32,7 +32,7 @@
         <div class="TempControls">
             <h2>Rods</h2>
 
-            <h3>Insertion: 50%</h3>
+            <h3 id="insertionPercentage">Insertion: 50%</h3>
 
             <div class="RodControls">
                 <div class="Rods">
@@ -40,7 +40,7 @@
                     <h4>Lower Rods</h4>  
                 </div>
 
-                <div class="Slider">
+                <div class="Slider" id="rodSlider">
                     <input type="range" min="0" max="2" value="1">
                 </div>
             </div>
@@ -52,19 +52,19 @@
 
             <div class="Coolant1">
                 <h4>Coolant Valve 1</h4>
-                <button></button>
+                <button id="CV1"></button>
             </div>
 
             <div class="Coolant2">
                 <h4>Coolant Valve 2</h4>
-                <button></button>
+                <button id="CV2"></button>
             </div>
 
         </div>
 
         <div class="Feedwater">
             <h2>Feedwater</h2>
-            <button></button>
+            <button id="FW"></button>
         </div>
 
         <div class="ReliefValves">
@@ -72,22 +72,22 @@
 
             <div class="RV1">
                 <h4>Relief Valve 1</h4>
-                <button></button>
+                <button id="RV1"></button>
             </div>
 
             <div class="RV2">
                 <h4>Relief Valve 2</h4>
-                <button></button>
+                <button id="RV2"></button>
             </div>
 
             <div class="RV3">
                 <h4>Relief Valve 3</h4>
-                <button></button>
+                <button id="RV3"></button>
             </div>
 
             <div class="RV4">
                 <h4>Relief Valve 4</h4>
-                <button></button>
+                <button id="RV4"></button>
             </div>
 
         </div>

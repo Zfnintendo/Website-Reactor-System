@@ -1,1 +1,0 @@
-let CurrentTemperature = document.getElementById("CurrentTemperature")
