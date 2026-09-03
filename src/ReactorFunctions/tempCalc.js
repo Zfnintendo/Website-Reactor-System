@@ -5,8 +5,6 @@ class TemperatureCalculator {
     // init
     constructor( initTemp, rodCoeff, coolantCoeff, fwCoeff, rvCoeff, insertion, coolant, fw, rv) {
 
-        this.calculatedTemp = initTemp + (100 - insertion) * (rodCoeff) - coolantCoeff * coolant - fwCoeff * fw - rvCoeff * rv;
-
         this.baseline = initTemp;
         this.rodC = rodCoeff;
         this.coolantC = coolantCoeff;
